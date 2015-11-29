@@ -1,0 +1,43 @@
+// Place all the styles related to the myself controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+        #history_posts_related {
+        width:80%;
+        margin:20px auto;/*主面板DIV居中*/
+        height:300px;
+        background-color: yellow;
+        }
+
+        #history_go_back {
+        width:80%;
+        margin:20px auto;/*主面板DIV居中*/
+        height:20px;
+        }
+
+        #self_info_all {
+        width:80%;
+        margin:20px auto;/*主面板DIV居中*/
+        height:350px;
+        }
+
+        #self_info_self_info {
+        width:70%;
+        float: left;
+        height:99%;
+        background-color: yellow;
+        }
+
+        #self_info_frients {
+        width:20%;
+        float: right;
+        margin-right:20px;
+        height:70%;
+        background-color: yellow;
+        }
+
+        #self_info_go_history {
+        width:80%;
+        margin:20px auto;/*主面板DIV居中*/
+        height:20px;
+        }

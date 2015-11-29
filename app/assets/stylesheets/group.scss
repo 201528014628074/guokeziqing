@@ -1,0 +1,53 @@
+// Place all the styles related to the group controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+    #search {
+        width:80%;
+        margin:0px auto;/*主面板DIV居中*/
+        height:50px;
+        background-color: yellow;
+    }
+
+        #posts {
+        width: 80%;
+        height:550px;
+        margin:0px auto;/*主面板DIV居中*/
+        }
+
+        #group_info {
+        width:40%;
+        height: 99%;
+        float: left;
+        margin-left: 20px;;/*主面板DIV居中*/
+    }
+
+        #put_post {
+        width: 99%;
+        height: 100px;
+        background-color: red;
+        margin-top: 20px;
+        }
+
+        #group_notice {
+        width: 99%;
+        height: 150px;
+        background-color: red;
+        margin-top: 10px;
+        }
+
+        #group_posts {
+        width: 99%;
+        height: 240px;
+        background-color: red;
+        margin-top: 10px;
+        }
+
+        #hot_tags {
+        width:30%;
+        float:right;
+        height: 50%;
+        margin-top:20px;
+        margin-right: 20px;
+        background-color: red;
+    }

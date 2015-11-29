@@ -1,0 +1,40 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+    #login {
+    width: 600px;
+    height: 400px;
+    margin: 0px auto;
+    background-color: yellow;
+    }
+
+    #bgo {
+    float: left;
+    width: 45%;
+    height: 99%;
+    margin-left: 10px;
+    background-color: red;
+    }
+
+    #log_info {
+    float: left;
+    width: 45%;
+    height: 99%;
+    background-color:blue;
+    }
+
+    #register_info {
+    width: 800px;
+    height: 400px;
+    margin: 0px auto;
+    background-color:blue;
+    }
+
+    a:link,a:visited
+{
+}
+a:hover,a:active
+{
+}
+

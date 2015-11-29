@@ -1,0 +1,22 @@
+%html
+  %head
+    %title Guokeziqing
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    #header
+      %ul
+        %li
+          %a{:href => "#home"} 退出
+        %li
+          %a{:href => "#home"} 王灿。风铃
+        %li
+          %a{:href => "#news"} 个人信息
+        %li
+          %a{:href => "#contact"} 小组
+        %li
+          %a{:href => "#about"} 首页
+    = yield
+    #footer 底部（footer）
+  

@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  get 'myself/history_page'
+
+  get 'myself/info_page'
+
+  get 'post/post_page'
+
+  get 'group/group_page'
+
+  get 'groups/groups_page'
+
+  get 'groups/group_page'
+
+  get 'groups/groups_page'
+
+  get 'login/register_page'
+
+  get 'login/login_page'
+
+  get 'homepage/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
