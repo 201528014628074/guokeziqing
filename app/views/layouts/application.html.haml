@@ -5,11 +5,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    #header.navbar
-      .navbar-inner
-        .container-fluid
-          %h2{:style => "font-style:italic;"}
-            %strong Guokeziqing.com
+    %div{:style => "margin-bottom:60px;"}
+      %nav#header.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+        .navbar-header
+          %a.navbar-brand{:href => "#"} GuoKeZiQing.com
         %table#home_link
           %thead
             %tr{:style => "padding-left:20px;"}

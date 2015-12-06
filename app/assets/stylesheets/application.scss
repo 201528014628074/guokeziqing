@@ -104,17 +104,17 @@ table#home_link th {
   text-align: left;
   text-decoration:underline;
 }
-   /*顶部面板样式*/
+   /*顶部面板样式
     #header {
        background-color: #EEEE11;
-    }
+    }*/
 
         /*底部面板样式*/
     #footer {
-        width:1320px;
+        width:100%;
         margin:0px auto;/*主面板DIV居中*/
         height:50px;
-        border:1px #F00 solid;
+        background-color: #f2f2f5;
     }
 
     /*
