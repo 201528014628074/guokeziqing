@@ -19,11 +19,11 @@ user2_info = UserInfo.create(:user_login_id => user2.id, :gender => '女', :nick
 group1 = GroupInfo.create(:group_name => '羽毛球', :user_login_id => user1.id, :create_time => Time.new, :image_url => './group1_info_image.jpg')
 group2 = GroupInfo.create(:group_name => '随机过程', :user_login_id => user2.id, :create_time => Time.new, :image_url => './group2_info_image.jpg')
 
-post1 = Post.create(:group_info_id => group1.id, :title => '羽毛球考试内容', :context_url => './post1_context.txt', :user_login_id => user2.id, :edit_time => Time.new, :is_notice => false)
-post2 = Post.create(:group_info_id => group2.id, :title => '随机过程考试内容', :context_url => './post2_context.txt', :user_login_id => user1.id, :edit_time => Time.new, :is_notice => false)
+post1 = Post.create(:group_info_id => group1.id, :title => '羽毛球考试内容', :context_url => '#{RAILS_ROOT}/app/assets/data/posts/1.txt', :user_login_id => user2.id, :edit_time => Time.new, :is_notice => false)
+post2 = Post.create(:group_info_id => group2.id, :title => '随机过程考试内容', :context_url => '#{RAILS_ROOT}/app/assets/data/posts/2.txt', :user_login_id => user1.id, :edit_time => Time.new, :is_notice => false)
 
-comment1 = Comment.create(:post_id => post1.id, :edit_time => Time.new, :context_url => './comment1_context.txt', :user_login_id => user1.id)
-comment2 = Comment.create(:post_id => post2.id, :edit_time => Time.new, :context_url => './comment2_context.txt', :user_login_id => user2.id)
+comment1 = Comment.create(:post_id => post1.id, :edit_time => Time.new, :context_url => '#{RAILS_ROOT}/app/assets/data/comments/1.txt', :user_login_id => user1.id)
+comment2 = Comment.create(:post_id => post2.id, :edit_time => Time.new, :context_url => '#{RAILS_ROOT}/app/assets/data/comments/2.txt', :user_login_id => user2.id)
 
 like_post1 = LikePost.create(:user_login_id => user1.id, :post_id => post1.id)
 like_post2 = LikePost.create(:user_login_id => user2.id, :post_id => post2.id)

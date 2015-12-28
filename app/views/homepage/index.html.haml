@@ -7,54 +7,19 @@
             %input.form-control{:placeholder => "Search", :type => "text", :style => "width:400px;"}
             %button.btn.btn-default{:type => "submit", :style => "width:100px"} 搜索
       #all_post
-        .wb
-          .wb_contain
-            .wb_info
-              .wb_title
-                %p.title_p 微博标题标题
-              %h6.wb_body 工作日白天的交通总体运行平稳；②近期雪雾天气相对频繁，对高速公路车辆通行会有影响，晚间和凌晨出行请注意收听收看路况信息，合理选择好行驶路线；③晚高峰期间，车流主要集中在市区二、三环路和部分联络线的出城方向；④12月2日晚（下周三），万事达中心有篮球比赛。
-          .comments
-            %ul
-              %li  aaaa
-              %li  bbbb
-              %li  ccccc
-              %li  dddd
-        .wb
-          .wb_contain
-            .wb_info
-              .wb_title
-                %p.title_p 微博标题标题
-              %h6.wb_body 工作日白天的交通总体运行平稳；②近期雪雾天气相对频繁，对高速公路车辆通行会有影响，晚间和凌晨出行请注意收听收看路况信息，合理选择好行驶路线；③晚高峰期间，车流主要集中在市区二、三环路和部分联络线的出城方向；④12月2日晚（下周三），万事达中心有篮球比赛。
-          .comments
-            %ul
-              %li  aaaa
-              %li  bbbb
-              %li  ccccc
-              %li  dddd
-        .wb
-          .wb_contain
-            .wb_info
-              .wb_title
-                %p.title_p 微博标题标题
-              %h6.wb_body 工作日白天的交通总体运行平稳；②近期雪雾天气相对频繁，对高速公路车辆通行会有影响，晚间和凌晨出行请注意收听收看路况信息，合理选择好行驶路线；③晚高峰期间，车流主要集中在市区二、三环路和部分联络线的出城方向；④12月2日晚（下周三），万事达中心有篮球比赛。
-          .comments
-            %ul
-              %li  aaaa
-              %li  bbbb
-              %li  ccccc
-              %li  dddd
-        .wb
-          .wb_contain
-            .wb_info
-              .wb_title
-                %p.title_p 微博标题标题
-              %h6.wb_body 工作日白天的交通总体运行平稳；②近期雪雾天气相对频繁，对高速公路车辆通行会有影响，晚间和凌晨出行请注意收听收看路况信息，合理选择好行驶路线；③晚高峰期间，车流主要集中在市区二、三环路和部分联络线的出城方向；④12月2日晚（下周三），万事达中心有篮球比赛。
-          .comments
-            %ul
-              %li  aaaa
-              %li  bbbb
-              %li  ccccc
-              %li  dddd
+        - @all_posts.each do |post|
+          .wb
+            .wb_contain
+              .wb_info
+                .wb_title
+                  %p.title_p= post.title + '(' + @groups[post.id] + ')'
+                %h6.wb_body=  link_to post.context_url,{:controller =>'post',:action => 'post_page',:id => post.id}
+            .comments
+              %ul
+                %li=  '回复： ' + @comments_nums[post.id].to_s
+                %li=  '赞： ' + @likes_nums[post.id].to_s
+                %li=  '收藏： ' + @collect_nums[post.id].to_s
+                %li=  post.edit_time
     #info
       #self_info 
         .nav_title
@@ -64,24 +29,24 @@
           %ul.list
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right= @user_info['nick_name']
+                %span.color 昵称：
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right= @user_info['gender']
+                %span.color 性别：
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right= @user_info['home']
+                %span.color 地址：
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right= @user_info['institute']
+                %span.color 研究所：
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right= @user_info['email']
+                %span.color email:
       #hot_tag 
         .nav_title
           %h4.title
@@ -134,4 +99,5 @@
               %p
                 %span.right 671
                 %span.color banyuezhuan
+    .clearfloat
 
