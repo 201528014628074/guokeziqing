@@ -13,7 +13,7 @@
               .wb_info
                 .wb_title
                   %p.title_p= post.title + '(' + @groups[post.id] + ')'
-                %h6.wb_body=  link_to post.context_url,{:controller =>'post',:action => 'post_page',:id => post.id}
+                %h6.wb_body=  link_to @posts_content[post.id],{:controller =>'post',:action => 'post_page',:id => post.id}
             .comments
               %ul
                 %li=  '回复： ' + @comments_nums[post.id].to_s

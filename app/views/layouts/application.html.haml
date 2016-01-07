@@ -12,10 +12,9 @@
         %table#home_link
           %thead
             %tr{:style => "padding-left:20px;"}
-              %th= link_to"首页",{:controller =>'homepage',:action => 'index'}
-              %th= link_to"小组",{:controller =>'groups',:action => 'groups_page'}
-              %th= link_to"个人信息",{:controller =>'myself',:action => 'info_page'}
-              %th  王灿。风铃
+              %th= link_to"首页",{:controller =>'homepage',:action => 'index', :id => session[:user_id]}
+              %th= link_to"小组",{:controller =>'groups',:action => 'groups_page', :id => session[:user_id]}
+              %th= link_to"个人信息",{:controller =>'myself',:action => 'info_page', :id => session[:user_id]}
               %th= link_to"退出",{:controller =>'login',:action => 'login_page'}
     = yield
     #footer 底部（footer）
