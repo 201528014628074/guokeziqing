@@ -4,7 +4,7 @@
       #search_info
         %form.navbar-form.navbar-left{:role => "search"}
           .form-group
-            %input.form-control{:placeholder => "Search", :type => "text", :style => "width:400px;"}
+            %input.form-control{:placeholder => "Search", :type => "text",:name => "searchwords", :style => "width:400px;"}
             %button.btn.btn-default{:type => "submit", :style => "width:100px"} 搜索
       #all_post
         - @all_posts.each do |post|
@@ -81,23 +81,23 @@
           %ul.list
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right
+                %span.color= link_to @hot_posts_title[@hot_posts_id[0]], options={:controller =>'post',:action => 'post_page',:id => @hot_posts_id[0]}
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right
+                %span.color= link_to @hot_posts_title[@hot_posts_id[1]], {:controller =>'post',:action => 'post_page',:id => @hot_posts_id[1]}
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right
+                %span.color= link_to @hot_posts_title[@hot_posts_id[2]], {:controller =>'post',:action => 'post_page',:id => @hot_posts_id[2]}
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right
+                %span.color= link_to @hot_posts_title[@hot_posts_id[3]], {:controller =>'post',:action => 'post_page',:id => @hot_posts_id[3]}
             %li
               %p
-                %span.right 671
-                %span.color banyuezhuan
+                %span.right
+                %span.color= link_to @hot_posts_title[@hot_posts_id[4]], {:controller =>'post',:action => 'post_page',:id => @hot_posts_id[4]}
     .clearfloat
 
